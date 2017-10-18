@@ -5,6 +5,8 @@
 ** Display error
 */
 
+#include <unistd.h>
+
 void my_puterr(char *str)
 {
 	write(2, &str, my_strlen(str));
