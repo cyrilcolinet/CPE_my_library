@@ -2,17 +2,18 @@
 ** EPITECH PROJECT, 2017
 ** my_strncat
 ** File description:
-** Concatenate n character of two strings
+** task03D07
 */
 
-char *my_strncat(char *dest, char *src, int n)
+char *my_strncat(char *dest, char const *src, int nb)
 {
-	int i = 0;
 	char *ptr = dest + my_strlen(dest);
-	while (i < n && src[i] != '\0') {
-		ptr[i] = src[i];
-		i++;
+	int j = 0;
+
+	while (src[j] != '\0' && j < nb) {
+		ptr[j] = src[j];
+		j++;
 	}
-	ptr[i] = '\0';
+	ptr[j] = '\0';
 	return (dest);
 }

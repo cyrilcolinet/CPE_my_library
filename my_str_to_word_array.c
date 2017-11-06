@@ -5,17 +5,30 @@
 ** Put each words of a string into an array
 */
 
-#include <stdlib.h>
+static int check_characters_alpha(char c)
+{
+	if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) ||
+	    (c >= 97 && c <= 122)) {
+		return (1);
+	}
+	return (0);
+}
 
-#define IS_BTWS(value, a, b) ((value) >= (a) && (value) <= (b))
-#define IS_BTWN(value, a, b) ((value) <= (a) && (value) >= (b))
+static int check_characters_word(char c)
+{
+	if ((c <= '/' && c >= 32) || (c <= '@' && c >= ':') ||
+	    (c <= '`' && c >= '[') || (c <= 127 && c >= '}')) {
+		return (1);
+	}
+	return (0);
+}
 
-int find_word(char *str)
+static int find_word(char *str)
 {
 	int i = 0;
 	int nb = 0;
 	while (str[i] != '\0') {
-		while (IS_BTWS(str[i], 48, 57) || IS_BTWS(str[i], 65, 90) || IS_BTWS(str[i], 97, 122))
+		while (check_characters_alpha(str[i]))
 			i++;
 		nb++;
 		i++;
@@ -26,17 +39,16 @@ int find_word(char *str)
 char **my_str_to_word_array(char *str)
 {
 	int nb = find_word(str);
-	char **array = malloc(sizeof(char *) * (nb + 1));
+	char **array = my_malloc(sizeof(char *) * (nb + 1));
 	int i = 0;
 	int character;
 	int key = 0;
-	
 	while (str[i] != '\0') {
-		array[key] = malloc(sizeof(char **) * my_strlen(str));
-		while(IS_BTWN(str[i], '/', 32) || IS_BTWN(str[i], '@', ':') || IS_BTWN(str[i], '`', '[') || IS_BTWN(str[i], 127, '{'))
+		array[key] = my_malloc(sizeof(char **) * my_strlen(str));
+		while (check_characters_word(str[i]))
 			i++;
 		character = 0;
-		while(IS_BTWS(str[i], 48, 57) || IS_BTWS(str[i], 65, 90) || IS_BTWS(str[i], 97, 122)) {
+		while (check_characters_alpha(str[i])) {
 			array[key][character] = str[i];
 			i++;
 			character++;
@@ -44,5 +56,5 @@ char **my_str_to_word_array(char *str)
 		key++;
 	}
 	array[key] = 0;
-	return array;
+	return (array);
 }

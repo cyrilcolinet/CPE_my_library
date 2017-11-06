@@ -10,7 +10,6 @@ char *my_strstr(char *str, char *to_find)
 	int i;
 	int j = 0;
 	int found = 0;
-
 	if (to_find[0] == '\0')
 		return (str);
 	while (str[j] != '\0') {
@@ -19,7 +18,7 @@ char *my_strstr(char *str, char *to_find)
 			if (to_find[i] != '\0' && to_find[i + 1] == '\0')
 				return (&str[j]);
 			else if (str[j] == '\0')
-				return 0;
+				return (0);
 			i++;
 		}
 		j++;
