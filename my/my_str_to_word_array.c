@@ -16,10 +16,12 @@ static int check_characters_alpha(char c)
 
 static int check_characters_word(char c)
 {
+	my_put_nbr(c);
 	if ((c <= '/' && c >= 32) || (c <= '@' && c >= ':') ||
 	    (c <= '`' && c >= '[') || (c <= 127 && c >= '}')) {
 		return (1);
 	}
+	my_putstr("b\n");
 	return (0);
 }
 
@@ -39,12 +41,12 @@ static int find_word(char *str)
 char **my_str_to_word_array(char *str)
 {
 	int nb = find_word(str);
-	char **array = my_malloc(sizeof(char *) * (nb + 1));
+	char **array = my_malloc(sizeof(char) * (nb + 1));
 	int i = 0;
 	int character;
 	int key = 0;
-	while (str[i] != '\0') {
-		array[key] = my_malloc(sizeof(char **) * my_strlen(str));
+	while (str[i]) {
+		array[key] = my_malloc(sizeof(char) * my_strlen(str));
 		while (check_characters_word(str[i]))
 			i++;
 		character = 0;

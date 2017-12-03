@@ -11,7 +11,7 @@ void *my_malloc(unsigned int size)
 {
 	void *ptr = malloc(size);
 	if (ptr == NULL) {
-		my_putstr("error");
+		my_puterr("Malloc failed. Abord.\n");
 		exit(84);
 	}
 	return (ptr);

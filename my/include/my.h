@@ -272,4 +272,26 @@ void my_puterr(char *str);
 **/
 void *my_malloc(unsigned int size);
 
+/**
+** Duplicate string
+** @param (char) *str
+** @return (char*)
+**/
+char *my_strdup(char *str);
+
+/**
+** Equivalent to split
+** @param (char *) str
+** @return (char **)
+**/
+char **my_str_to_word_array(char *str);
+
+/**
+** Cut string with delimiter given as parameter
+** @param (char *) str
+** @param (char *) delimiter
+** return (char **) - Return word array in double pointer char
+**/
+char **my_strtok(char *str, char *delimiter);
+
 #endif
