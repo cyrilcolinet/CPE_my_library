@@ -15,6 +15,6 @@ clean:
 
 fclean:			
 				rm -f *.a
-				make fclean ./my
+				make fclean -C ./my
 
 re:				fclean all
