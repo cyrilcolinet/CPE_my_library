@@ -10,8 +10,10 @@
 void my_putstr(const char *str)
 {
 	int len;
+
 	if (str) {
 		len = my_strlen(str);
+
 		if (len > 0)
 			write(1, str, len);
 	}

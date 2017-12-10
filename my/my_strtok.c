@@ -2,12 +2,12 @@
 ** EPITECH PROJECT, 2017
 ** my_strtok
 ** File description:
-** cut fonction with delimiter
+** cut fonction with delim
 */
 
 # include <stdbool.h>
 
-static bool is_into_string(char c, char *str)
+static bool cts(char c, char *str)
 {
 	if (!c)
 		return (true);
@@ -20,28 +20,29 @@ static bool is_into_string(char c, char *str)
 	return (false);
 }
 
-static int count_parts(char *str, char *delimiter)
+static int cnt_parts(char *str, char *delim)
 {
 	int count = 0;
 
 	for (int i = 0; str[i]; i++) {
-		if (!is_into_string(str[i], delimiter) && is_into_string(str[i + 1], delimiter))
+		if (!cts(str[i], delim) && cts(str[i + 1], delim))
 			count++;
 	}
 
 	return (count);
 }
 
-char **my_strtok(char *str, char *delimiter)
+char **my_strtok(char *str, char *delim)
 {
 	int i = 0, j = 0, k = 0;
-	char **ret = my_malloc(sizeof(*ret) * (count_parts(str, delimiter) + 1));
+	char **ret = my_malloc(sizeof(*ret) * (cnt_parts(str, delim) + 1));
 
 	for (int i = 0; str[i]; i++) {
-		if (!is_into_string(str[i], delimiter))
+		if (!cts(str[i], delim))
 			k++;
 
-		if (!is_into_string(str[i], delimiter) && is_into_string(str[i + 1], delimiter)) {
+		if (!cts(str[i], delim) &&
+			cts(str[i + 1], delim)) {
 			ret[j] = my_malloc(sizeof(**ret) * (k + 1));
 			ret[j][0] = 0;
 			ret[j] = my_strncat(ret[j], &str[i - (k - 1)], k);
