@@ -6,6 +6,7 @@
 */
 
 # include <stdbool.h>
+# include "my.h"
 
 static bool cts(char c, char *str)
 {
@@ -34,7 +35,7 @@ static int cnt_parts(char *str, char *delim)
 
 char **my_strtok(char *str, char *delim)
 {
-	int i = 0, j = 0, k = 0;
+	int j = 0, k = 0;
 	char **ret = my_malloc(sizeof(*ret) * (cnt_parts(str, delim) + 1));
 
 	for (int i = 0; str[i]; i++) {

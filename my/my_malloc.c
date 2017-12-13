@@ -5,7 +5,8 @@
 ** Malloc with exit when fail
 */
 
-#include <stdlib.h>
+# include <stdlib.h>
+# include "my.h"
 
 void *my_malloc(unsigned int size)
 {

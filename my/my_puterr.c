@@ -5,7 +5,8 @@
 ** Display error
 */
 
-#include <unistd.h>
+# include <unistd.h>
+# include "my.h"
 
 void my_puterr(char *str)
 {
