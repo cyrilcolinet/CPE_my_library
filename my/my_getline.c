@@ -35,7 +35,7 @@ static int get_character(int fdesc, char *str)
 	return (reader);
 }
 
-char *get_next_line(int fdesc)
+char *my_getline(int fdesc)
 {
 	char *line = malloc(sizeof(*line) * (READ_SIZE + 1));
 	int i = 0;

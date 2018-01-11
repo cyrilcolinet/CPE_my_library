@@ -322,6 +322,6 @@ char *my_realloc(char *ptr, unsigned int size);
 ** @param (int) fdesc
 ** @return (char *) line
 **/
-char *my_getline(int fdesc, int size);
+char *my_getline(int fdesc);
 
 #endif
