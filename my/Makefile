@@ -46,7 +46,9 @@ SRC 				= my_atoi.c 					\
 					  my_strtok.c 					\
 					  my_strupcase.c 				\
 					  my_swap.c 					\
-					  my_trim.c 
+					  my_trim.c 					\
+					  my_realloc.c 					\
+					  my_getline.c
 
 CFLAGS 				= -Wall -Wextra -Werror -I./include
 
