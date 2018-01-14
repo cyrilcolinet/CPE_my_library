@@ -9,7 +9,7 @@
 # define MY_H_
 
 # ifndef READ_SIZE
-# define READ_SIZE (64)
+# define READ_SIZE (128)
 # endif
 
 # include <stdbool.h>
