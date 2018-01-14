@@ -5,7 +5,10 @@
 ## Makefile for lib
 ##
 
-all:			libmy.a
+all:		libmy.a libmy_printf.a
+
+libmy_printf.a:
+			make -C ./my_printf
 
 libmy.a:
 			make -C ./my
@@ -16,5 +19,6 @@ clean:
 fclean:			
 			rm -f *.a
 			make fclean -C ./my
+			make fclean -C ./my_printf
 
 re:			fclean all

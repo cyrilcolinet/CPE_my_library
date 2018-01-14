@@ -37,6 +37,7 @@ SRC 				= my_atoi.c 					\
 					  my_strcat.c 					\
 					  my_strcmp.c 					\
 					  my_strcpy.c 					\
+					  my_strncmp.c					\
 					  my_strdup.c 					\
 					  my_strlen.c 					\
 					  my_strlowcase.c 				\
