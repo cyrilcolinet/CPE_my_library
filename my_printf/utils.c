@@ -7,6 +7,30 @@
 
 # include "my_printf.h"
 
+pf set_function(int offset)
+{
+	pf ret = NULL;
+
+	if (offset == 0) ret = flag_d;
+	else if (offset == 1) ret = flag_d;
+	else if (offset == 2) ret = flag_s;
+	else if (offset == 3) ret = flag_S;
+	else if (offset == 4) ret = flag_c;
+	else if (offset == 5) ret = flag_p;
+	else if (offset == 6) ret = flag_x;
+	else if (offset == 7) ret = flag_X;
+	else if (offset == 8) ret = flag_o;
+	else if (offset == 9) ret = flag_b;
+	else if (offset == 10) ret = flag_m;
+	else if (offset == 11) ret = flag_u;
+	else if (offset == 12) ret = flag_n;
+	else if (offset == 13) ret = flag_percent;
+	else if (offset == 14) ret = flag_d;
+	else if (offset == 15) ret = flag_d;
+
+	return (ret);
+}
+
 pf *flag_functions(pf **arr)
 {
 	*arr = (pf*)malloc(sizeof(pf) * 17);
@@ -16,26 +40,8 @@ pf *flag_functions(pf **arr)
 		return (NULL);
 	}
 
-	/*for (int i = 0; i < 17; i++)
-		(*arr)[i] = set_function(i);*/
-
-	(*arr)[0] = flag_d;
-	(*arr)[1] = flag_d;
-	(*arr)[2] = flag_s;
-	(*arr)[3] = flag_S;
-	(*arr)[4] = flag_c;
-	(*arr)[5] = flag_p;
-	(*arr)[6] = flag_x;
-	(*arr)[7] = flag_X;
-	(*arr)[8] = flag_o;
-	(*arr)[9] = flag_b;
-	(*arr)[10] = flag_m;
-	(*arr)[11] = flag_u;
-	(*arr)[12] = flag_n;
-	(*arr)[13] = flag_percent;
-	(*arr)[14] = flag_d;
-	(*arr)[15] = flag_d;
-	//(*arr)[16] = flag_l;
+	for (int i = 0; i < 17; i++)
+		(*arr)[i] = set_function(i);
 
 	return (*arr);
 }

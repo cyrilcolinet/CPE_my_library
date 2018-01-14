@@ -38,9 +38,6 @@ void start(char *format, param_t *param, va_list ap)
 			out += my_putchar(*ptr);
 		}
 
-		if (*ptr == '+' || *ptr == ' ')
-			ptr++;
-
 		ptr++;
 	}
 }
@@ -60,5 +57,6 @@ void my_printf(char *format, ...)
 
 	configure(param, flags);
 	start(format, param, ap);
+	free(param);
 	va_end(ap);
 }
