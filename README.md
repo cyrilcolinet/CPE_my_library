@@ -11,7 +11,7 @@ git clone https://github.com/mrlizzard/CPE_my_library.git lib
 ```
 
 > :bulb: If you want to clone with the **ssh** protocol, replace the `https` link by `ssh`.
-> ```git clone git@github.com:mrlizzard/CPE_my_library.git lib```
+> Command with ssh link: ```git clone git@github.com:mrlizzard/CPE_my_library.git lib```
 
 After clone, do this commands:
 
