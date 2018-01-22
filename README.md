@@ -1,8 +1,8 @@
-# C Library - Used everything (only c projects)
+# :shell: C Library - Used everything (only c projects)
 
 This C library contains all the basic C functions like printf, strcat, etc...
 
-# Compilation
+# :computer: Compilation
 
 To compile, go into your project root folder, and make:
 
