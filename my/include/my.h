@@ -129,15 +129,16 @@ int my_str_isalpha(char *str);
 ** @return (int) - Return the count of parts delimter by a delimier
 ** specified in argument...
 **/
-int my_count_delim_part(char *str, char *delim);
+int my_countwords(char *str, char delim);
 
 /**
 ** Check if string contains ONLY numeric characters
 ** @param (char const) *str
+** @param (bool) neg
 ** @return (int) - Return 1 if the string contains only
 ** numeric characters, and 0 otherwise
 **/
-int my_str_isnum(char *str);
+int my_str_isnum(char *str, bool neg);
 
 /**
 ** Check if the string contains only lowercase characters
@@ -308,10 +309,10 @@ char **my_str_to_word_array(char *str);
 /**
 ** Cut string with delimiter given as parameter
 ** @param (char *) str
-** @param (char *) delimiter
+** @param (char) delim
 ** return (char **) - Return word array in double pointer char
 **/
-char **my_strtok(char *str, char *delimiter);
+char **my_strtok(char *str, char delim);
 
 /**
 ** Print number in defined base
@@ -348,6 +349,22 @@ void my_printf(char *format, ...);
 ** Free pointer
 ** @param (void) *ptr
 **/
-void my_free(void *ptr);
+void my_free(void **ptr);
+
+char *my_strconfigure(unsigned int size);
+
+char *my_strjoin(char *str1, char *str2);
+
+char *my_strjoin_clear(char *str1, char *str2, int free_both);
+
+char *my_strjoin_char(char *str, char delim);
+
+bool my_strstartswith(char *str1, char *str2);
+
+bool my_strendswith(char *str1, char *str2);
+
+char *my_strchr(char *str, char delim);
+
+void my_freetab(char **arr);
 
 # endif

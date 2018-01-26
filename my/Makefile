@@ -50,7 +50,7 @@ SRC 				= my_atoi.c 					\
 					  my_strncat.c 					\
 					  my_strncpy.c 					\
 					  my_strstr.c 					\
-					  my_count_delim_part.c 		\
+					  my_countwords.c 		 		\
 					  my_strtok.c 					\
 					  my_strupcase.c 				\
 					  my_swap.c 					\
@@ -63,9 +63,17 @@ SRC 				= my_atoi.c 					\
 					  my_printf_flags_unsigned.c	\
 					  my_printf_utils.c 			\
 					  my_printf.c 					\
-					  my_free.c
+					  my_free.c 					\
+					  my_strconfigure.c 			\
+					  my_strjoin.c 					\
+					  my_strjoin_clear.c 			\
+					  my_strjoin_char.c 			\
+					  my_strendswith.c 				\
+					  my_strstartswith.c 			\
+					  my_strchr.c 					\
+					  my_freetab.c
 
-CFLAGS 				= -Wall -Wextra -Werror -I./include
+CFLAGS 				= -Wall -Wextra -I./include
 
 CC					= gcc
 
