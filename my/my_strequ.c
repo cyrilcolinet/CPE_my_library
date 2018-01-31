@@ -8,7 +8,7 @@
 # include <stdbool.h>
 # include "my.h"
 
-bool my_streq(char *str1, char *str2)
+bool my_strequ(char *str1, char *str2)
 {
 	bool ret = false;
 
