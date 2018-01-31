@@ -5,12 +5,13 @@ group: stable
 os: linux
 
 script:
-  - cd project
+  - cd -
   - make fclean
   - make
 
-before_script:
-  - mkdir -p project/include
+before_install:
+  - cd ../
+  - mkdir -p include
 
 notifications:
   email: false
