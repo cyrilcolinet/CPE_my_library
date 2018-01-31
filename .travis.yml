@@ -6,8 +6,7 @@ os: linux
 
 script:
   - cd -
-  - make fclean
-  - make
+  - make re
 
 before_install:
   - cd ../
