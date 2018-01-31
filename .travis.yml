@@ -1,0 +1,16 @@
+language: c
+
+group: stable
+
+os: linux
+
+script:
+  - cd project
+  - make fclean
+  - make
+
+before_script:
+  - mkdir -p {project/include}
+
+notifications:
+  email: false
