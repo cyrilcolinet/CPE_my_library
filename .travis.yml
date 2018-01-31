@@ -10,7 +10,7 @@ script:
   - make
 
 before_script:
-  - mkdir -p {project/include}
+  - mkdir -p project/include
 
 notifications:
   email: false
