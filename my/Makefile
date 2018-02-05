@@ -15,7 +15,7 @@ SUCCESS				= /bin/echo -e "\x1b[1m\x1b[33m\#\#\x1b[32m $1\x1b[0m"
 
 NAME 				= libmy.a
 
-SRC 				= my_atoi.c 					\
+SRCNAMES			= my_atoi.c 					\
 					  my_compute_power_rec.c 		\
 					  my_put_nbr_base.c				\
 					  my_compute_square_root.c 		\
@@ -73,6 +73,8 @@ SRC 				= my_atoi.c 					\
 					  my_strchr.c 					\
 					  my_freetab.c 					\
 					  my_strequ.c
+
+SRC 				= $(addprefix src/, $(SRCNAMES))
 
 CFLAGS 				= -Wall -Wextra -I./include
 
