@@ -16,6 +16,6 @@ char *my_strcapitalize(char *str)
 		if (my_str_isalpha(str) && (str[(i - 1)] == ' ' || i == 0))
 			str[i] -= 32;
 	}
-	
+
 	return (str);
 }

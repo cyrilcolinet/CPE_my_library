@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2017
 ** my_compute_square_root
 ** File description:
-** Function that return the square root of the number given as argument. If the square root is not a whole number, the function should return 0
+** Calculus quare root
 */
 
 # include "my.h"
