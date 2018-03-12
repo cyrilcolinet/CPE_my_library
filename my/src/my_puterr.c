@@ -5,15 +5,10 @@
 ** Display error
 */
 
-# include <stdbool.h>
 # include <unistd.h>
-# include <stdlib.h>
 # include "my.h"
 
-void my_puterr(char *str, bool close)
+void my_puterr(char *str)
 {
 	write(2, str, my_strlen(str));
-
-	if (close)
-		exit(84);
 }

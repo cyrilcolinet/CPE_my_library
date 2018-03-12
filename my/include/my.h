@@ -280,10 +280,9 @@ void my_sort_int_array(int *array, int size);
 /**
 ** Print error (on the stderr output)
 ** @param (char) *str
-** @param (bool) close
 ** @return (void)
 **/
-void my_puterr(char *str, bool close);
+void my_puterr(char *str);
 
 /**
 ** Malloc own (exit wen malloc failed)
