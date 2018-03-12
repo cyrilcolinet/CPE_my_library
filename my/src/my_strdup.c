@@ -10,7 +10,8 @@
 char *my_strdup(char *str)
 {
 	int size = my_strlen(str) + 1;
-	char *new_str = my_malloc(size);
+	char *new_str = my_strconfigure(size);
+
 	my_strcpy(new_str, str);
 	return (new_str);
 }
