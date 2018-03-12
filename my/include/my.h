@@ -133,12 +133,11 @@ int my_countwords(char *str, char delim);
 
 /**
 ** Check if string contains ONLY numeric characters
-** @param (char const) *str
-** @param (bool) neg
-** @return (int) - Return 1 if the string contains only
-** numeric characters, and 0 otherwise
+** @param (char) *str
+** @return (bool) - Return true if the string contains only
+** numeric characters, and false otherwise
 **/
-int my_str_isnum(char *str, bool neg);
+bool my_str_isnum(char *str);
 
 /**
 ** Check if the string contains only lowercase characters

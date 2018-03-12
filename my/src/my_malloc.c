@@ -13,7 +13,7 @@ void *my_malloc(unsigned int size)
 	void *ptr = malloc(size);
 
 	if (ptr == NULL)
-		my_puterr("Malloc failed. Abord.\n", true);
+		my_puterr("Malloc failed. Abord.\n");
 
 	return (ptr);
 }
