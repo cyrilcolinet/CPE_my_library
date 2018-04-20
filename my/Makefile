@@ -57,12 +57,6 @@ SRCNAMES			= my_atoi.c 					\
 					my_trim.c 					\
 					my_realloc.c 					\
 					my_getline.c 					\
-					my_printf_flags_hexadecimal.c \
-					my_printf_flags_number.c 		\
-					my_printf_flags_string.c 		\
-					my_printf_flags_unsigned.c	\
-					my_printf_utils.c 			\
-					my_printf.c 					\
 					my_free.c 					\
 					my_strconfigure.c 			\
 					my_strjoin.c 					\
