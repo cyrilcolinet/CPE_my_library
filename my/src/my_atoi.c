@@ -21,12 +21,12 @@ int my_atoi(char *str)
 	} else if (str[0] == '+') {
 		i = 1;
 	}
+
 	while (str[i] >= 48 && str[i] <= 57) {
 		number *= 10;
 		number += ((int)str[i] - 48);
 		i++;
 	}
-	if (neg == 1)
-		number = -number;
-	return (number);
+
+	return (number = ((neg == 1) ? -number : number));
 }
